@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    container_name: ssr-web-manager
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - PORT=8080
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      - net.ipv4.ip_forward=1
+    volumes:
+      - ./ssr_simplified.sh:/app/ssr_simplified.sh:ro

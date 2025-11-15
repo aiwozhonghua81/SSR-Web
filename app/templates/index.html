@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SSR Web Manager</title>
+  <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SSR Web Manager</h1>
+    <p class="desc">固定配置：rc4-md5 / origin / plain</p>
+
+    <div class="actions">
+      <button data-action="install">安装 SSR</button>
+      <button data-action="update">更新 SSR</button>
+      <button data-action="uninstall" class="danger">卸载 SSR</button>
+    </div>
+
+    <div class="actions">
+      <button data-action="start">启动</button>
+      <button data-action="stop">停止</button>
+      <button data-action="restart">重启</button>
+      <button data-action="view_log">查看日志</button>
+    </div>
+
+    <div class="actions">
+      <button data-action="view_user">查看账号信息</button>
+      <button data-action="view_conn">显示连接信息</button>
+      <button data-action="modify">修改配置</button>
+      <button data-action="config_bbr">配置 BBR</button>
+    </div>
+
+    <pre id="output" class="output"></pre>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
